@@ -1,0 +1,45 @@
+# ============ Keil MDK-ARM build outputs ============
+*.o
+*.obj
+*.d
+*.crf
+*.dep
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.htm
+*.iex
+*.lnp
+*.tra
+*.sfr
+# 编译输出目录（Objects / Listings）
+**/N32G455/
+**/Obj/
+**/Objects/
+**/Listings/
+**/Output/
+**/Debug/
+**/Release/
+
+# ============ Keil uVision local / personal files ============
+# 工程核心文件 .uvprojx 保留；以下为个人调试配置与 GUI 布局，不入库
+*.uvguix.*
+*.uvoptx
+*.uvgui*
+*.build_log.htm
+*.scvd
+
+# ============ 备份 / 临时文件 ============
+*~
+*.bak
+*.swp
+*.tmp
+
+# ============ 编辑器 / 系统 ============
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
