@@ -1,0 +1,44 @@
+{
+  "name": "ether-cat N32G45x development",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "marus25.cortex-debug",
+        "redhat.vscode-xml"
+      ],
+      "settings": {
+        "C_Cpp.default.compilerPath": "/usr/bin/arm-none-eabi-gcc",
+        "C_Cpp.default.intelliSenseMode": "linux-gcc-arm",
+        "C_Cpp.default.cStandard": "c11",
+        "C_Cpp.default.defines": [
+          "N32G45X",
+          "USE_STDPERIPH_DRIVER"
+        ],
+        "C_Cpp.default.includePath": [
+          "${workspaceFolder}/program/Libraries/CMSIS/core",
+          "${workspaceFolder}/program/Libraries/CMSIS/device",
+          "${workspaceFolder}/program/Libraries/n32g45x_std_periph_driver/inc",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/Ethercat/Inc",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/Ethercat/port",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/Ethercat/src",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/SYSTEM/usart",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/SYSTEM/delay",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/SYSTEM/sys",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/USMART",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/User",
+          "${workspaceFolder}/program/FCM4E1553 Ethercat/RS485_ModbusRTU"
+        ],
+        "files.associations": {
+          "*.h": "c"
+        }
+      }
+    }
+  },
+  "postCreateCommand": "arm-none-eabi-gcc --version | head -n 1 && printf '\\nCodespace ready. See CODESPACES.md for build and hardware notes.\\n'"
+}
